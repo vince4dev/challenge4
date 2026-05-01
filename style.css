@@ -1,7 +1,161 @@
+/* FONTS ------------------------------ */
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/outfit-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/outfit-v15-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/outfit-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* young-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Young Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/young-serif-v2-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* VARIABLES ------------------------------ */
+:root {
+  /*  Colors */
+  --clr-White: hsl(0, 0%, 100%);
+
+  --clr-Stone-100: hsl(30, 54%, 90%);
+  --clr-Stone-150: hsl(30, 18%, 87%);
+  --clr-Stone-600: hsl(30, 10%, 34%);
+  --clr-Stone-900: hsl(24, 5%, 18%);
+
+  --clr-Brown-800: hsl(14, 45%, 36%);
+
+  --clr-Rose-800: hsl(332, 51%, 32%);
+  --clr-Rose-50: hsl(330, 100%, 98%);
+
+  /* Fonts */
+  --fs-40: calc(40 / 16 * 1rem);
+  --fs-36: calc(36 / 16 * 1rem);
+  --fs-28: calc(28 / 16 * 1rem);
+  --fs-20: calc(20 / 16 * 1rem);
+  --fs-16: calc(16 / 16 * 1rem);
+
+  --fs-h1-M: var(--fs-36);
+  --fs-h1: var(--fs-40);
+  --fs-h2: var(--fs-28);
+  --fs-h3: var(--fs-20);
+  --fs-p: var(--fs-16);
+
+  --lh-100: 100%;
+  --lh-150: 150%;
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-regular: 400;
+}
+
+/* RESET ------------------------------ */
+/* Box sizing rules */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* BODY ------------------------------ */
+body {
+  background-color: var(--clr-Stone-900);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* RECIPE ------------------------------ */
+.container {
+  width: min(100%, calc(1440 / 16 * 1rem));
+  background-color: var(--clr-Stone-100);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe {
+  width: min(100%, calc(375 / 16 * 1rem));
+  background-color: var(--clr-White);
+}
+
+/* FOOTER ------------------------------ */
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA ------------------------------ */
+/* Tablette */
+@media (min-width: 768px) {
+  .recipe {
+    width: min(100%, calc(616 / 16 * 1rem));
+    margin-block: 128px;
+  }
+  .recipe h1 {
+    font-size: var(--fs-h1);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .recipe {
+    width: min(100%, calc(736 / 16 * 1rem));
+  }
 }

@@ -286,10 +286,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-.recipe__nut--item li {
-  padding-inline: 2rem;
+.recipe__nut--item li:first-child {
+  padding-left: 2rem;
 }
 .recipe__nut--item li:last-child {
+  padding-right: 2rem;
   font-weight: var(--fw-bold);
   color: var(--clr-Brown-800);
 }
@@ -298,7 +299,7 @@ body {
 /* Tablette */
 @media (min-width: 768px) {
   .recipe {
-    gap: 40px;
+    gap: 2.5rem;
     width: min(100%, calc(616 / 16 * 1rem));
     margin-block: 128px;
     padding: 40px;

@@ -277,20 +277,39 @@ body {
   display: grid;
   gap: 1.5rem;
 }
-.recipe__nut--list {
-  display: grid;
-  gap: 0.75rem;
+
+/* Table */
+.recipe__nut--table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.recipe__nut--item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+
+/* Rows */
+.recipe__nut--table tr.line {
+  padding: 0;
+  position: relative;
+  height: 1.5rem;
 }
-.recipe__nut--item li:first-child {
+
+.recipe__nut--table tr.line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid var(--clr-Stone-150);
+  left: 0;
+  transform: translateY(0.75rem);
+}
+
+/* Cells */
+.recipe__nut--table td {
+  padding: 0;
+}
+.recipe__nut--table td:first-child {
+  width: 50%;
   padding-left: 2rem;
 }
-.recipe__nut--item li:last-child {
-  padding-right: 2rem;
+.recipe__nut--table td:last-child {
+  padding-left: 0.5rem;
   font-weight: var(--fw-bold);
   color: var(--clr-Brown-800);
 }
@@ -314,7 +333,7 @@ body {
     padding: 0;
   }
 
-  .recipe h1 {
+  .recipe__h1 {
     font-size: var(--fs-h1);
   }
 }
